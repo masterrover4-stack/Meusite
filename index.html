@@ -7,6 +7,16 @@
 <style>
   #terminal{
 margin-top:40px;
+font-family:Courier New, monospace;
+color:#00ff9f;
+font-size:20px;
+text-align:left;
+width:300px;
+margin-left:auto;
+margin-right:auto;
+  }
+  #terminal{
+margin-top:40px;
 font-size:18px;
 color:#00ff9f;
 font-family:Courier New, monospace;
@@ -46,6 +56,7 @@ button:hover{
 </head>
 
 <body>
+  <div id="terminal"></div>
 <div id="terminal"></div>
 <h1>ACCESSO GARANTIDO 💻</h1>
 <p>Bem-vindo e Faça o pix.</p>
@@ -115,6 +126,53 @@ setTimeout(escrever,1500);
 }
 
 escrever();
+  </script>
+  <script>
+const mensagens = [
+"Conectando ao servidor...",
+"Acessando banco de dados...",
+"Quebrando senha...",
+"Acesso liberado."
+];
+
+let linha = 0;
+let letra = 0;
+
+function digitar() {
+
+if(linha < mensagens.length){
+
+let terminal = document.getElementById("terminal");
+
+if(!terminal.children[linha]){
+let p = document.createElement("p");
+terminal.appendChild(p);
+}
+
+let texto = mensagens[linha];
+
+terminal.children[linha].textContent += texto.charAt(letra);
+
+letra++;
+
+if(letra < texto.length){
+
+setTimeout(digitar,50);
+
+}else{
+
+linha++;
+letra = 0;
+
+setTimeout(digitar,800);
+
+}
+
+}
+
+}
+
+digitar();
   </script>
 </body>
 
