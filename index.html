@@ -5,6 +5,12 @@
 <title>Claud Site</title>
 
 <style>
+  canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+  }
   #hackbox{
 margin-top:40px;
 color:#00ff9f;
@@ -159,6 +165,9 @@ setTimeout(escrever,1500);
 
 escrever();
   </script>
+  <button onclick="alert('Eu falei pra não clicar 😎')">
+Não Click aqui
+  </button>
   <script>
 const mensagens = [
 "Conectando ao servidor...",
