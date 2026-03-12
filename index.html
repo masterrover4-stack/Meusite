@@ -5,6 +5,12 @@
 <title>Claud Site</title>
 
 <style>
+  #terminal{
+margin-top:40px;
+font-size:18px;
+color:#00ff9f;
+font-family:Courier New, monospace;
+  }
 body{
   background:black;
   color:#00ff9f;
@@ -40,7 +46,7 @@ button:hover{
 </head>
 
 <body>
-
+<div id="terminal"></div>
 <h1>ACCESSO GARANTIDO 💻</h1>
 <p>Bem-vindo e Faça o pix.</p>
 
@@ -87,6 +93,29 @@ drops[i]++;
 
 setInterval(draw,35);
 </script>
+  <script>
+const mensagens = [
+"Conectando ao servidor...",
+"Acessando banco de dados...",
+"Quebrando senha...",
+"ACESSO LIBERADO ✅"
+];
+
+let i = 0;
+let terminal = document.getElementById("terminal");
+
+function escrever(){
+if(i < mensagens.length){
+let linha = document.createElement("p");
+linha.textContent = mensagens[i];
+terminal.appendChild(linha);
+i++;
+setTimeout(escrever,1500);
+}
+}
+
+escrever();
+  </script>
 </body>
 
 </html>
