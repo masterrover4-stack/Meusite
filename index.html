@@ -5,6 +5,29 @@
 <title>Claud Site</title>
 
 <style>
+  #hackbox{
+margin-top:40px;
+color:#00ff9f;
+font-family:Courier New, monospace;
+}
+
+#barra{
+width:300px;
+height:20px;
+background:#111;
+margin:auto;
+border:1px solid #00ff9f;
+}
+
+#progresso{
+width:0%;
+height:100%;
+background:#00ff9f;
+}
+
+#status{
+margin-top:10px;
+}
   #terminal{
 margin-top:40px;
 font-family:Courier New, monospace;
@@ -56,6 +79,15 @@ button:hover{
 </head>
 
 <body>
+  <div id="hackbox">
+<p>Hackeando sistema...</p>
+
+<div id="barra">
+<div id="progresso"></div>
+</div>
+
+<p id="status">0%</p>
+  </div>
   <div id="terminal"></div>
 <div id="terminal"></div>
 <h1>ACCESSO GARANTIDO 💻</h1>
@@ -173,6 +205,35 @@ setTimeout(digitar,800);
 }
 
 digitar();
+  </script>
+  <script>
+
+let progresso = 0;
+
+function hackear(){
+
+let barra = document.getElementById("progresso");
+let status = document.getElementById("status");
+
+if(progresso < 100){
+
+progresso++;
+
+barra.style.width = progresso + "%";
+status.innerText = progresso + "%";
+
+setTimeout(hackear,60);
+
+}else{
+
+status.innerText = "ACESSO TOTAL LIBERADO 💻";
+
+}
+
+}
+
+hackear();
+
   </script>
 </body>
 
