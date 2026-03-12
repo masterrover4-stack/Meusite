@@ -2,14 +2,38 @@
 <html>
 
 <head>
-<title>Meu site</title>
+<title>Claud Ro</title>
 
 <style>
 body{
-  background-color:black;
-  color:white;
-  font-family:Arial;
+  background:black;
+  color:#00ff9f;
+  font-family:Courier New, monospace;
   text-align:center;
+  margin-top:100px;
+}
+
+h1{
+  font-size:50px;
+  text-shadow:0 0 10px #00ff9f, 0 0 20px #00ff9f;
+}
+
+p{
+  font-size:20px;
+}
+
+button{
+  margin-top:30px;
+  padding:15px 30px;
+  background:#00ff9f;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+  border-radius:8px;
+}
+
+button:hover{
+  background:#00cc7a;
 }
 </style>
 
@@ -17,8 +41,13 @@ body{
 
 <body>
 
-<h1>Olá mundo 🌍</h1>
-<p>Esse é meu primeiro site publicado na internet!</p>
+<h1>ACCESS GRANTED 💻</h1>
+
+<p>Bem-vindo ao meu site, faz logo o pix.</p>
+
+<button onclick="alert('Sistema desbloqueado 😎')">
+Entrar
+</button>
 
 </body>
 
