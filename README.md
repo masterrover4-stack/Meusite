@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Claud Ro</title>
+<title>Meu site hacker</title>
 
 <style>
 body{
@@ -43,7 +43,7 @@ button:hover{
 
 <h1>ACCESS GRANTED 💻</h1>
 
-<p>Bem-vindo ao meu site, faz logo o pix.</p>
+<p>Bem-vindo ao meu site hacker.</p>
 
 <button onclick="alert('Sistema desbloqueado 😎')">
 Entrar
